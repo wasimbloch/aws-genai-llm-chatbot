@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { SpaceBetween, Container, Header, Button, Input } from '@cloudscape-design/components';
-import ChatMessage from './chat-message';
 import { TelcoQuickActions } from './telco-quick-actions';
 import '../../../src/styles/telco-theme.css';
 
@@ -75,7 +74,7 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
         </Header>
 
         <div className="telco-chat-container">
-          <div style={{ height: '60vh', overflowY: 'auto', padding: '1rem' }}>
+          <div className="telco-messages-container">
             {chatMessages.map((message, index) => (
               <div
                 key={index}
@@ -98,7 +97,7 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
 
           <TelcoQuickActions onActionClick={handleQuickActionClick} />
 
-          <div style={{ padding: '1rem', borderTop: '1px solid #eee' }}>
+          <div className="telco-input-container">
             <SpaceBetween direction="horizontal" size="s">
               <Input
                 className="telco-input"
@@ -107,7 +106,7 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
                 onKeyDown={handleKeyDown}
                 placeholder="Type your question here..."
                 disabled={isLoading}
-                style={{ flexGrow: 1 }}
+                __internalRootRef={undefined}
               />
               <Button
                 className="telco-button"
