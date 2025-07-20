@@ -10,6 +10,8 @@ import { AppContext } from "./common/app-context";
 import Models from "./pages/chatbot/models/models";
 import MultiChatPlayground from "./pages/chatbot/playground/multi-chat-playground";
 import Playground from "./pages/chatbot/playground/playground";
+import { TelcoPlayground } from "./pages/chatbot/playground/telco-playground";
+import { SessionProvider } from "./contexts/session-context";
 import NotFound from "./pages/not-found";
 import AddData from "./pages/rag/add-data/add-data";
 import CreateWorkspace from "./pages/rag/create-workspace/create-workspace";
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <div style={{ height: "100%" }}>
+      <SessionProvider>
       <Router>
         <div>
           <Routes>
@@ -71,6 +74,14 @@ function App() {
                       element={
                         <Layout showHeader={true}>
                           <Playground />
+                        </Layout>
+                      }
+                    />
+                    <Route
+                      path="telco"
+                      element={
+                        <Layout showHeader={false}>
+                          <TelcoPlayground />
                         </Layout>
                       }
                     />
@@ -249,6 +260,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      </SessionProvider>
     </div>
   );
 }

@@ -33,6 +33,7 @@ export default function NavigationPanel() {
           text: "Chatbot",
           items: [
             { type: "link", text: "Playground", href: "/chatbot/playground" },
+            { type: "link", text: "Telco Assistant", href: "/chatbot/telco" },
             {
               type: "link",
               text: "Multi-chat playground",

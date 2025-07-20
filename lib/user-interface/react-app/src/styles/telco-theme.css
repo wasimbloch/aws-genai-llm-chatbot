@@ -1,0 +1,101 @@
+:root {
+  --telco-primary: #0066cc;
+  --telco-secondary: #ff6600;
+  --telco-background: #f8f9fa;
+  --telco-text: #333333;
+  --telco-accent: #00aaff;
+  --telco-success: #28a745;
+  --telco-warning: #ffc107;
+  --telco-error: #dc3545;
+  --telco-border-radius: 8px;
+  --telco-font: 'Roboto', sans-serif;
+}
+
+.telco-theme {
+  font-family: var(--telco-font);
+  background-color: var(--telco-background);
+}
+
+.telco-header {
+  background: linear-gradient(90deg, var(--telco-primary) 0%, var(--telco-accent) 100%);
+  color: white;
+  padding: 1rem;
+  border-bottom: 3px solid var(--telco-secondary);
+}
+
+.telco-chat-container {
+  border-radius: var(--telco-border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.telco-message-user {
+  background-color: var(--telco-primary);
+  color: white;
+  border-radius: var(--telco-border-radius);
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+.telco-message-bot {
+  background-color: #f0f2f5;
+  color: var(--telco-text);
+  border-radius: var(--telco-border-radius);
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  max-width: 80%;
+  align-self: flex-start;
+  border-left: 4px solid var(--telco-secondary);
+}
+
+.telco-input {
+  border: 2px solid var(--telco-primary);
+  border-radius: var(--telco-border-radius);
+  padding: 0.75rem;
+  font-family: var(--telco-font);
+}
+
+.telco-button {
+  background-color: var(--telco-primary);
+  color: white;
+  border: none;
+  border-radius: var(--telco-border-radius);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.telco-button:hover {
+  background-color: var(--telco-accent);
+}
+
+.telco-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.telco-quick-action-button {
+  background-color: white;
+  border: 1px solid var(--telco-primary);
+  color: var(--telco-primary);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.telco-quick-action-button:hover {
+  background-color: var(--telco-primary);
+  color: white;
+}
+
+.telco-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
