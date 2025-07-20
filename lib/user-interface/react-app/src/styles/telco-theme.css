@@ -110,3 +110,12 @@
   padding: 1rem;
   border-top: 1px solid #eee;
 }
+
+.telco-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.telco-input {
+  flex-grow: 1;
+}

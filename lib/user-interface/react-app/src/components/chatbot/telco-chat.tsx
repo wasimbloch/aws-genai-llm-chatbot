@@ -98,7 +98,7 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
           <TelcoQuickActions onActionClick={handleQuickActionClick} />
 
           <div className="telco-input-container">
-            <SpaceBetween direction="horizontal" size="s">
+            <div className="telco-input-wrapper">
               <Input
                 className="telco-input"
                 value={inputValue}
@@ -106,7 +106,6 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
                 onKeyDown={handleKeyDown}
                 placeholder="Type your question here..."
                 disabled={isLoading}
-                __internalRootRef={undefined}
               />
               <Button
                 className="telco-button"
@@ -115,7 +114,7 @@ export const TelcoChat: React.FC<TelcoChatProps> = ({
               >
                 Send
               </Button>
-            </SpaceBetween>
+            </div>
           </div>
         </div>
       </Container>
